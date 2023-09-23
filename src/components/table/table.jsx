@@ -34,12 +34,12 @@ const CryptoTable = ({ cryptoData }) => {
 
               {crypto.market_cap_change_percentage_24h < 0 ? (
                 <td className="text-danger">
-                  <i class="fa-solid fa-caret-down"></i>
+                  <i className="fa-solid fa-caret-down"></i>
                   {crypto.market_cap_change_percentage_24h}%
                 </td>
               ) : (
                 <td className="text-success">
-                  <i class="fa-solid fa-caret-up"></i>
+                  <i className="fa-solid fa-caret-up"></i>
                   {crypto.market_cap_change_percentage_24h}%
                 </td>
               )}
