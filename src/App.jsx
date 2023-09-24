@@ -8,25 +8,25 @@ import Pagination from "./components/pagination/pagination";
 const App = () => {
   const [coins, setCoins] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 10; // Replace with the total number of pages in your pagination
+  const totalPages = 90;
 
   const handlePageChange = (newPage) => {
-    console.log(newPage);
-
-    // Add logic here to fetch data for the new page if needed
+    fetchData(newPage);
     setCurrentPage(newPage);
   };
 
-  const fetchData = () => {};
-  useEffect(() => {
+  const fetchData = (pageNum) => {
     axios
       .get(
-        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${97}&sparkline=false`
+        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${pageNum}&sparkline=false`
       )
       .then((response) => {
         setCoins(response.data);
       })
       .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    fetchData(1);
   }, []);
 
   return (
