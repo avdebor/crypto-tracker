@@ -4,7 +4,7 @@ import "./search.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 
-const Search = () => {
+const Search = ({ coins, setCoins }) => {
   const [searchText, setSearchText] = useState("");
 
   const handleSearchChange = (e) => {
@@ -13,8 +13,8 @@ const Search = () => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    // You can implement your search functionality here
-    alert(`Searching for: ${searchText}`);
+    const filteredData = coins.filter((item) => item.id.includes(searchText));
+    setCoins(filteredData);
   };
 
   return (
