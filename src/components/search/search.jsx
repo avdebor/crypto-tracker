@@ -17,6 +17,10 @@ const Search = ({ coins, setCoins }) => {
     setCoins(filteredData);
   };
 
+  function reloadPage() {
+    window.location.reload(false);
+  }
+
   return (
     <div className="container text-center mt-5">
       <h1 className="display-4 text-white">Search a currency</h1>
@@ -30,6 +34,12 @@ const Search = ({ coins, setCoins }) => {
             onChange={handleSearchChange}
             style={{ backgroundColor: "white", color: "#000" }}
           />
+          <button
+            className="btn btn-lg bg-dark text-light"
+            onClick={reloadPage}
+          >
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
           <button className="btn btn-primary btn-lg" type="submit">
             Search
           </button>

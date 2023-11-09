@@ -30,6 +30,10 @@ const App = () => {
     fetchData(1);
   }, []);
 
+  // function refreshPage() {
+  //   window.location.reload(false);
+  // }
+
   return (
     <div className="app">
       <Search coins={coins} setCoins={setCoins} />
@@ -41,6 +45,8 @@ const App = () => {
         totalPages={totalPages}
         onPageChange={handlePageChange}
       />
+
+      {/* <button onClick={refreshPage}>Click to reload!</button> */}
     </div>
   );
 };
