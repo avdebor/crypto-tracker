@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./index.css";
 import axios from "axios";
 import Search from "./components/search/search";
@@ -30,23 +30,16 @@ const App = () => {
     fetchData(1);
   }, []);
 
-  // function refreshPage() {
-  //   window.location.reload(false);
-  // }
-
   return (
     <div className="app">
+      x
       <Search coins={coins} setCoins={setCoins} />
-
       <CryptoTable cryptoData={coins} />
-
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
         onPageChange={handlePageChange}
       />
-
-      {/* <button onClick={refreshPage}>Click to reload!</button> */}
     </div>
   );
 };

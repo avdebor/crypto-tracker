@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */ // TODO: upgrade to latest eslint tooling
 import { useState } from "react";
 import "./search.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -38,7 +38,7 @@ const Search = ({ coins, setCoins }) => {
             className="btn btn-lg bg-dark text-light"
             onClick={reloadPage}
           >
-            <i class="fa fa-times" aria-hidden="true"></i>
+            <i className="fa fa-times" aria-hidden="true"></i>
           </button>
           <button className="btn btn-primary btn-lg" type="submit">
             Search

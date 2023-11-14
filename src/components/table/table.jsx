@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */ // TODO: upgrade to latest eslint tooling
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const CryptoTable = ({ cryptoData }) => {
