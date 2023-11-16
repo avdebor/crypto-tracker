@@ -7,7 +7,7 @@ import Pagination from "./components/pagination/pagination";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 50;
+  const totalPages = 3;
   const [coins, setCoins] = useState([]);
 
   const handlePageChange = (newPage) => {
